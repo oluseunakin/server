@@ -1,15 +1,10 @@
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-    console.log("in other")
+    console.log(req.url)
     res.end('welcome')
 })
 
-server.on('request', (req, res) => {
-    console.log("in request")
-    //res.writeHead(200).end('worked')
-})
-
-server.listen(9000, () => {
+server.listen(() => {
     console.log('Server started')
 })
