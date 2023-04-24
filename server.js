@@ -6,6 +6,6 @@ const server = http.createServer((req, res) => {
     
 })
 
-server.listen(10000, () => {
-    console.log('server is up')
+server.listen(process.env.PORT, () => {
+    console.log('server is up at '+process.env.PORT)
 })
